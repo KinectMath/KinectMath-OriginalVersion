@@ -1,0 +1,30 @@
+﻿<ad:DockableContent x:Class="MDI_PlotGraph_Integration.Panels.ControlPanelContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ad="clr-namespace:AvalonDock;assembly=AvalonDock"
+             mc:Ignorable="d" 
+             d:DesignHeight="275" d:DesignWidth="160"
+             Title="Control Panel" FontFamily="Arial Rounded MT"
+             BorderBrush="Black"
+             BorderThickness="2">
+    <ScrollViewer>
+        <StackPanel>
+            <Button Height="40"  Name="StartButton" Content="Kinect Start" FontWeight="Normal" FontStyle="Normal" FontSize="20" Margin="0,1,0,1" Click="StartButton_Click" ToolTip="Voice Command: Kinect Start"/>
+
+            <Button Height="40" Name="StopButton" Content="Kinect Stop" FontSize="20" Margin="0,1,0,1" Click="StopButton_Click" ToolTip="Voice Command: Kinect Stop"/>
+
+            <Button Height="40" Name="ResetButton" Content="Kinect Reset" FontSize="20" Margin="0,1,0,1" Click="ResetButton_Click" ToolTip="Voice Command: Kinect Reset"/>
+
+            <Button Height="40" Name="AddLine" Content="New Line" FontSize="20" Margin="0,1,0,1" Click="AddLine_Click" ToolTip="Voice Command: New Line"/>
+
+            <Button Height="40" Name="AddParabola" FontSize="20" Margin="0,1,0,1" Click="AddParabola_Click" ToolTip="Voice Command: New Parabola">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">
+                   New Parabola
+                </TextBlock>
+            </Button>
+            <Button Height="40" Name="AddSine" Content="New Sine" FontSize="20" Margin="0,1,0,1" ToolTip="Voice Command: New Sine" Click="AddSine_Click" />
+        </StackPanel>
+    </ScrollViewer>
+</ad:DockableContent>

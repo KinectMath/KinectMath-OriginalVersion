@@ -1,0 +1,84 @@
+﻿<Window x:Class="MDI_PlotGraph_Integration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ad="clr-namespace:AvalonDock;assembly=AvalonDock"
+        xmlns:my="clr-namespace:MDI_PlotGraph_Integration.Panels" 
+        Title="Kinect Math" Width="1280" Height="800" 
+        Loaded="Window_Loaded" Closing="Window_Closing" Icon="Resources/UW-logo.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Export Table" Tag="FileExport" ToolTip="Export Current Table to Text File." Click="Export_Click"/>
+                <MenuItem Header="About" Tag="File.About" ToolTip="About Us." Click="About_Click"/>
+                <Separator />
+                <MenuItem Header="Exit" Tag="File.Exit" Click="Exit_click" InputGestureText="Alt-F4" >
+                    <MenuItem.ToolTip>
+                        <ToolTip>
+                            Exit the Program.
+                        </ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Voice Running" Name="Voice_Button" Click="VoiceControl_Click" Background="Green" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <MenuItem Header="Tool" Name="Tool_Button">
+                <MenuItem Header="WhiteBoard" Name="WhiteBoard" Tag="Tool.WhiteBoard" Click="WhiteBoard_Click"/>
+            </MenuItem>
+            <MenuItem Header="Options" Name="Option_Button">
+                <MenuItem Header="General" Name="General" Tag="Option.General" Click="Option_Click"/>
+                <MenuItem Header="Tracking Mode" Name="TrackingMode" Tag="Option.TrackingMode" Click="Option_Click"/>
+                <MenuItem Header="Editing Mode" Name="EditingMode" Tag="Option.EditingMode" Click="Option_Click"/>
+                <MenuItem Header="Matching Mode" Name="MatchingMode" Tag="Option.MatchingMode" Click="Option_Click"/>                
+            </MenuItem>
+            <MenuItem Header="About" Name="About_Button" Click="About_Click" ToolTip="More About Us."/>
+            <MenuItem Header="Youtube!" Name="Youtube_Button" Click="Youtube_Click" ToolTip="Go See our videos on Youtube!!"/>
+        </Menu>
+        <ad:DockingManager Name="dockingManager" Grid.Row="1">
+            <ad:ResizingPanel Orientation="Vertical">
+                <ad:ResizingPanel x:Name="ResizePane" Orientation="Horizontal">
+                    <ad:ResizingPanel Orientation="Vertical" ad:ResizingPanel.ResizeWidth="130">
+                        <ad:DockablePane ad:ResizingPanel.ResizeHeight="100" x:Name="FunctionPanel">
+                            <ad:DockableContent Title="Functions" IsCloseable="False" ToolTip="Function List Box">
+                                <ListBox x:Name="FunctionListBox" SelectionChanged="FunctionListBox_SelectionChanged" ToolTip="MouseClick = Select; Ctrl + MouseClick = Deselect" />
+                            </ad:DockableContent>
+                        </ad:DockablePane>
+                        <ad:DockablePane x:Name="TablePanel">
+                            <ad:DockableContent x:Name="TableContent" IsCloseable="False" Title="Table">
+                                <ListBox x:Name="TableListBox" >
+                                    <ListBoxItem Background="DarkGray" Foreground="White" BorderBrush="Black">
+                                        <TextBlock Text="X&#x9;Y" FontFamily="Arial Rounded MT" HorizontalAlignment="Center" />
+                                    </ListBoxItem>
+                                </ListBox>
+                            </ad:DockableContent>
+                        </ad:DockablePane>
+                    </ad:ResizingPanel>
+                    <ad:ResizingPanel Orientation="Vertical">
+                        <ad:ResizingPanel x:Name="CenterPane" Orientation="Horizontal">
+                            <ad:DocumentPane x:Name="GraphDocumentPane" ad:ResizingPanel.ResizeWidth="400">
+                                <my:GraphPlot x:Name="theGraphPlot"/>
+                            </ad:DocumentPane>
+                        </ad:ResizingPanel>
+                    </ad:ResizingPanel>
+                    
+                    <ad:ResizingPanel Orientation="Vertical" ad:ResizingPanel.ResizeWidth="320">
+                        <ad:DockablePane ShowHeader="true"  ad:ResizingPanel.ResizeHeight="200">
+                            <my:IndicatorPanelContent IsCloseable="False" x:Name="IndicatorPan"/>
+                        </ad:DockablePane>
+                        <ad:ResizingPanel Orientation="Horizontal" ad:ResizingPanel.ResizeWidth="320">
+                            <ad:DockablePane  ShowHeader="true"  ad:ResizingPanel.ResizeHeight="150">
+                                <my:ControlPanelContent IsCloseable="False" x:Name="ControlPan" Selector.IsSelected="True"/>
+                            </ad:DockablePane>
+                        </ad:ResizingPanel>
+                        <ad:DockablePane  ShowHeader="true" ad:ResizingPanel.ResizeWidth="320" ad:ResizingPanel.ResizeHeight="240">
+                            <my:KinectCameraPanelContent IsCloseable="False" x:Name="KinectCameraPanelInMainWindow"/>
+                        </ad:DockablePane>
+                    </ad:ResizingPanel>
+                </ad:ResizingPanel>
+                
+            </ad:ResizingPanel>
+        </ad:DockingManager>
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿<ad:DockableContent x:Class="MDI_PlotGraph_Integration.Panels.IndicatorPanelContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ad="clr-namespace:AvalonDock;assembly=AvalonDock"
+             mc:Ignorable="d" 
+             d:DesignHeight="180" d:DesignWidth="320"
+             Title="Indicator"
+             BorderBrush="Black"
+             BorderThickness="3"
+             Background="White">
+    <ScrollViewer>
+        <StackPanel>
+            <ToggleButton Height="60" Click="TrackingButton_Click" Name="TrackingButton" >
+                <TextBlock FontFamily="Arial Rounded MT" FontSize="32" Height="42" HorizontalAlignment="Center" Name="Indicator_TrackingMode" Text="Tracking Mode" TextAlignment="Center" VerticalAlignment="Center" Width="250" Background="{x:Null}" Foreground="Black" Margin="0, 15, 0, 10" FontWeight="Bold" ToolTip="Voice Command: Tracking Mode"/>
+            </ToggleButton>
+            <ToggleButton Height="60" Name="EditingButton" Click="EditingButton_Click">
+                <TextBlock FontFamily="Arial Rounded MT" FontSize="32" Height="42" HorizontalAlignment="Center" Name="Indicator_EditingMode" Text="Editing Mode" TextAlignment="Center" VerticalAlignment="Center" Width="250" Background="{x:Null}" Foreground="Black"  Margin="0, 10, 0, 10" FontWeight="Bold" ToolTip="Voice Command: Editing Mode"/>
+            </ToggleButton>
+            <ToggleButton Height="60" Name="MatchingButton" Click="MatchingButton_Click" FontWeight="Bold">
+                <TextBlock FontFamily="Arial Rounded MT" FontSize="32" Height="42" HorizontalAlignment="Center" Name="Indicator_MatchingMode" Text="Matching Mode" TextAlignment="Center" VerticalAlignment="Center" Width="250" Background="{x:Null}" Foreground="Black"  Margin="0, 10, 0, 15" FontWeight="Bold" ToolTip="Voice Command: Matching Mode" />
+            </ToggleButton>
+        </StackPanel>
+    </ScrollViewer>
+</ad:DockableContent>

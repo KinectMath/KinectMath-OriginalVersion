@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="MDI_PlotGraph_Integration.Component.Window_Option_Content"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:ad="clr-namespace:AvalonDock;assembly=AvalonDock"
+             xmlns:my="clr-namespace:MDI_PlotGraph_Integration.Panels" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="600">
+    <Grid>
+        <TabControl Height="480" Width="600" HorizontalAlignment="Left" Name="Window_Option_TabControl" VerticalAlignment="Top" Grid.RowSpan="2">
+            <TabItem Header="General" Name="General">
+                <ad:ResizingPanel Orientation="Horizontal" Width="{Binding ElementName=Window_Option_TabControl, Path=Width}" Height="{Binding ElementName=Window_Option_TabControl, Path=Height}">
+                    <ad:DockablePane  ShowHeader="False" x:Name="GeneralOptionPane">
+                    </ad:DockablePane>
+                </ad:ResizingPanel>
+            </TabItem>
+            <TabItem Header="Tracking Mode" Name="TrackingMode">
+                <ad:ResizingPanel Orientation="Horizontal" Width="{Binding ElementName=Window_Option_TabControl, Path=Width}" Height="{Binding ElementName=Window_Option_TabControl, Path=Height}">
+                    <ad:DockablePane  ShowHeader="False" x:Name="TrackingOptionPane">
+                    </ad:DockablePane>
+                </ad:ResizingPanel>
+            </TabItem>
+            <TabItem Header="Editing Mode" Name="EditingMode">
+                <ad:ResizingPanel Orientation="Horizontal" Width="{Binding ElementName=Window_Option_TabControl, Path=Width}" Height="{Binding ElementName=Window_Option_TabControl, Path=Height}">
+                    <ad:DockablePane  ShowHeader="False" x:Name="EditingOptionPane">
+                    </ad:DockablePane>
+                </ad:ResizingPanel>
+            </TabItem>
+            <TabItem Header="Matching Mode" Name="MatchingMode">
+                <ad:ResizingPanel Orientation="Horizontal" Width="{Binding ElementName=Window_Option_TabControl, Path=Width}" Height="{Binding ElementName=Window_Option_TabControl, Path=Height}">
+                    <ad:DockablePane  ShowHeader="False" x:Name="MatchingOptionPane">
+                    </ad:DockablePane>
+                </ad:ResizingPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

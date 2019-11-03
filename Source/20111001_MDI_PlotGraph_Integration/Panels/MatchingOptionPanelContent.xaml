@@ -1,0 +1,21 @@
+﻿<ad:DockableContent x:Class="MDI_PlotGraph_Integration.Panels.MatchingOptionPanelContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ad="clr-namespace:AvalonDock;assembly=AvalonDock"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="600"
+             Title="Matching Option Panel"
+             BorderBrush="Black"
+             BorderThickness="3"
+             Background="White">
+    <Grid Background="White" ShowGridLines="False" DataContext="{Binding}">
+        <GroupBox Header="Graph Display :" Height="125" Name="GraphDisplay" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Margin="12,12,462,0" FontWeight="Bold">
+            <StackPanel Height="105" HorizontalAlignment="Center" Name="stackPanel1" VerticalAlignment="Top" Width="110" Orientation="Vertical">
+                <CheckBox Content="CurveSmooth" Height="16" Margin="5" Padding="5, 0, 2, 0" Name="RandomLineSmooth" FontWeight="Normal" Click="RandomLineSmooth_Click" />
+                
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</ad:DockableContent>

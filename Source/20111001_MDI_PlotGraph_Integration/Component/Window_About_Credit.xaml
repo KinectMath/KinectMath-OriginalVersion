@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="MDI_PlotGraph_Integration.Component.Window_About_Credit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Row="0">
+            <StackPanel Background="White">
+                <TextBlock TextWrapping="Wrap" Foreground="Black" FontSize="35" FontFamily="Cambria" HorizontalAlignment="Left"><Bold>Kinect Math</Bold></TextBlock>
+                <TextBlock TextWrapping="Wrap" Foreground="Green" FontSize="12" FontFamily="Cambria" HorizontalAlignment="Right">Prototype Verision: 0.7.2</TextBlock>
+                <TextBlock TextWrapping="Wrap" Foreground="Red" FontSize="12" FontFamily="Cambria" HorizontalAlignment="Right">Last Updated: 02.14.2012</TextBlock>
+            </StackPanel>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2" >
+            <ScrollViewer Background="White" >
+                <StackPanel>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" FontFamily="Cambria"><Bold>Students:</Bold></TextBlock>
+                    <TextBox TextWrapping="Wrap" Background="Transparent" BorderThickness="0" FontSize="20" FontFamily="Cambria" HorizontalAlignment="Center" IsReadOnly="True">Jack Chang</TextBox>
+                    <TextBox TextWrapping="Wrap" Background="Transparent" BorderThickness="0" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Center" IsReadOnly="True">wei0831@gmail.com</TextBox>
+                    <TextBox TextWrapping="Wrap" Background="Transparent" BorderThickness="0" FontSize="20" FontFamily="Cambria" HorizontalAlignment="Center" IsReadOnly="True">Jeb Pavleas</TextBox>
+                    <TextBox TextWrapping="Wrap" Background="Transparent" BorderThickness="0" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Center" IsReadOnly="True">jebpavleas@gmail.com</TextBox>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" FontFamily="Cambria"></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" FontFamily="Cambria"><Bold>Original Idea:</Bold></TextBlock>
+                    <TextBox TextWrapping="Wrap" Background="Transparent" BorderThickness="0" FontSize="20" FontFamily="Cambria" HorizontalAlignment="Center" IsReadOnly="True">Profesor Robin Angotti</TextBox>
+                    <TextBox TextWrapping="Wrap" Background="Transparent" BorderThickness="0" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Center" IsReadOnly="True">rangotti2004@gmail.com</TextBox>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" FontFamily="Cambria"></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" FontFamily="Cambria"><Bold>Faculty Advisor:</Bold></TextBlock>
+                    <TextBox TextWrapping="Wrap" Background="Transparent" BorderThickness="0" FontSize="20" FontFamily="Cambria" HorizontalAlignment="Center" IsReadOnly="True">Profesor Kelvin Sung</TextBox>
+                    <TextBox TextWrapping="Wrap" Background="Transparent" BorderThickness="0" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Center" IsReadOnly="True">ksung@u.washington.edu</TextBox>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" FontFamily="Cambria"></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" FontFamily="Cambria"><Bold>Reference:</Bold></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Cambria" HorizontalAlignment="Center">AvalonDock</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Center"><Hyperlink NavigateUri="http://avalondock.codeplex.com/" RequestNavigate="Hyperlink_RequestNavigate">http://avalondock.codeplex.com/</Hyperlink></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" FontFamily="Cambria"></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Cambria" HorizontalAlignment="Center">OxyPlot</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Center"><Hyperlink NavigateUri="http://oxyplot.codeplex.com/" RequestNavigate="Hyperlink_RequestNavigate">http://oxyplot.codeplex.com/</Hyperlink></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" FontFamily="Cambria"></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Cambria" HorizontalAlignment="Center">Microsoft Kinect SDK</TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Center"><Hyperlink NavigateUri="http://research.microsoft.com/en-us/um/redmond/projects/kinectsdk/" RequestNavigate="Hyperlink_RequestNavigate">http://research.microsoft.com/kinectsdk/</Hyperlink></TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</UserControl>

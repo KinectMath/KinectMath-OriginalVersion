@@ -1,0 +1,78 @@
+﻿<ad:DockableContent x:Class="MDI_PlotGraph_Integration.Panels.OptionPanelContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ad="clr-namespace:AvalonDock;assembly=AvalonDock"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="600"
+             Title="Option Panel"
+             BorderBrush="Black"
+             BorderThickness="3"
+             Background="White">
+    <Grid Background="White" ShowGridLines="False" DataContext="{Binding}">
+        <GroupBox Header="Graph Display :" Height="102" Name="GraphDisplay" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" Margin="20,12,174,0" FontWeight="Bold">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="left" Name="stackPanel1" VerticalAlignment="Top" Orientation="Vertical">
+                    <CheckBox Content="Distance" Height="16" Margin="5" Padding="5, 0, 2, 0" Name="DisplayDistance" FontWeight="Normal" Click="Display_Click"/>
+                    <CheckBox Content="Velocity" Height="16" Margin="5" Padding="5, 0, 2, 0"  Name="DisplayVelocity" FontWeight="Normal" Click="Display_Click"/>
+                    <CheckBox Content="Acceleration" Height="16" Margin="5" Padding="5, 0, 2, 0"  Name="DisplayAcceleration" FontWeight="Normal" Click="Display_Click"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Name="stackPanel2" VerticalAlignment="Top" Orientation="Vertical">
+                    <TextBlock FontWeight="Normal" UseLayoutRounding="False">
+                        Toggles the visibility of Distance, Velocity and  <LineBreak/>
+                        Acceleration. However, lines that are not currently  <LineBreak/>
+                        visible still continue to graph.
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Track Joint :" Height="100" Name="TrackJoint" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" Margin="20,120,172,0"  FontWeight="Bold">
+            <StackPanel Orientation="Horizontal">
+            <StackPanel Height="80" HorizontalAlignment="Left" Name="TackJointStackPanel" VerticalAlignment="Center" Width="97" Orientation="Vertical" MinWidth="0">
+                <RadioButton Content="Head" Height="16" Margin="5" Padding="5, 0, 2, 0" Name="RadioButtonHead" FontWeight="Normal" GroupName="TrackJoint" IsChecked="True" Click="RadioButtonHead_Click" ToolTip="Voice Command: Select Head"/>
+                <RadioButton Content="RightHand" Height="16" Margin="5" Padding="5, 0, 2, 0" Name="RadioButtonRightHand" FontWeight="Normal" GroupName="TrackJoint" Click="RadioButtonRightHand_Click" ToolTip="Voice Command: Select Right Hand"/>
+                <RadioButton Content="LeftHand" Height="16" Margin="5" Padding="5, 0, 2, 0" Name="RadioButtonLeftHand" FontWeight="Normal" GroupName="TrackJoint" Click="RadioButtonLeftHand_Click" ToolTip="Voice Command: Select Left Hand"/>
+            </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Name="stackPanel3" VerticalAlignment="Top" Orientation="Vertical">
+                    <TextBlock FontWeight="Normal" UseLayoutRounding="False">
+                        Changes the currently tracked joint that the <LineBreak/>
+                        Kinect uses for Tracking Mode and Matching Mode.
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Kinect Tilt :" Height="89" Name="KinectTilt" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" Margin="21,322,173,0"  FontWeight="Bold">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Height="50" HorizontalAlignment="Left" Name="KinectTiltPanel" VerticalAlignment="Center" Width="160" Orientation="Horizontal" MinWidth="0">
+                <Button Width="50" Margin="1,0,1,0" Content="+" Name="AddTilt"  FontSize="26" FontWeight="Bold" Click="AddTilt_Click" />
+                <Button Width="54" Margin="1,0,1,0" Background="Transparent" IsEnabled="False"/>
+                <Button Width="50" Margin="1,0,1,0" Content="-" Name="MinusTilt" FontSize="26"  FontWeight="Bold" Click="MinusTilt_Click" />
+                </StackPanel>
+                <StackPanel Margin="5,0,0,0 " HorizontalAlignment="Right" Name="stackPanel4" VerticalAlignment="Top" Orientation="Vertical" Width="229">
+                    <TextBlock FontWeight="Normal" UseLayoutRounding="False" TextWrapping="Wrap" >
+                        Changes the angle or tilt of the Kinect device. 
+                        <LineBreak/>
+                        <Run Foreground="Red" FontWeight="Bold">Disclaimer: Do not spam the buttons. You may damage your Kinect device !</Run>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Voice Accuracy :" Height="90" Name="ConfiLevel" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" Margin="21,226,173,0"  FontWeight="Bold">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Height="60" HorizontalAlignment="left" Name="VoiceAccuracyPanel" VerticalAlignment="Center" Width="160" Orientation="Horizontal" MinWidth="0">
+                <TextBox Height="25" Margin="5,0,5,0" Name="VoiceAccuracyText" VerticalContentAlignment="Center" Width="Auto" MaxWidth="35" MinWidth="35" IsReadOnly="True" />
+                <Slider Height="25" Name="VocieAccuracySlider" Width="110" ValueChanged="VocieAccuracySlider_ValueChanged" Maximum="1" Minimum="0"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Name="stackPanel5" VerticalAlignment="Top" Orientation="Vertical">
+                    <TextBlock FontWeight="Normal" UseLayoutRounding="False" Width="230" TextWrapping="Wrap">
+                       Changes the confidence level of the speech recognition. Lowering this value may cause Kinect Math to regester false positives. 
+                        <Run Foreground="Black" FontWeight="Bold">Recomended: 0.85 - 0.95 </Run>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <CheckBox Content="Integer Mode" Height="16" Padding="5, 0, 2, 0" Name="IntegerMode" Width="100" FontWeight="Normal" Click="IntegerMode_Click" Margin="436,29,58,429" />
+        <CheckBox Content="Natural Line Editing" Height="16" HorizontalAlignment="Left" Margin="436,60,0,0" Name="NaturalLineEditing" VerticalAlignment="Top" Width="135" Click="NaturalLineEditing_Click" />
+    </Grid>
+</ad:DockableContent>

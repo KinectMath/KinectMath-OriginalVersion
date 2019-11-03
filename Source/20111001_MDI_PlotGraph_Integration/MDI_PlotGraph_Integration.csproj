@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86A98553-4F41-4CA2-83D8-93F00A12FE72}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDI_PlotGraph_Integration</RootNamespace>
+    <AssemblyName>KinectMath</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\UW-logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AvalonDock, Version=1.3.3571.0, Culture=neutral, PublicKeyToken=85a1e0ada7ec13e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="AvalonDock.Themes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\AvalonDock.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="Coding4Fun.Kinect.Wpf, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Coding4Fun.Kinect.Wpf.1.1.0\lib\Coding4Fun.Kinect.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coding4Fun.Kinect.Wpf.1.1.0\lib\Microsoft.Expression.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Research.Kinect, Version=1.0.0.45, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Speech, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Speech Platform SDK\Assembly\Microsoft.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Speech.VoiceXml, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Speech Platform SDK\Assembly\Microsoft.Speech.VoiceXml.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot, Version=2011.11.2.2842, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\OxyPlot.Wpf.2011.11.2.2842\lib\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.OpenXml, Version=2011.3.4262.34982, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\OxyPlot.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Pdf, Version=2011.3.4262.34983, Culture=neutral, PublicKeyToken=c167629db8cf8ad9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\OxyPlot.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf, Version=2011.11.2.2842, Culture=neutral, PublicKeyToken=75e952ba404cdbb0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\OxyPlot.Wpf.2011.11.2.2842\lib\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Xps, Version=2011.3.4262.34986, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\OxyPlot.Xps.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Component\FlyingText.cs" />
+    <Compile Include="Component\Window_Option_Content.xaml.cs">
+      <DependentUpon>Window_Option_Content.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window_Splash.xaml.cs">
+      <DependentUpon>Window_Splash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\SineGraphing.cs" />
+    <Compile Include="Kinect\KinectDevice.Depth.cs" />
+    <Compile Include="Kinect\KinectDevice.Skeleton.cs" />
+    <Compile Include="Kinect\KinectDevice.Video.cs" />
+    <Compile Include="Kinect\VoiceSupport\SpeechRecognizer.cs" />
+    <Compile Include="Kinect\VoiceSupport\VoiceControl.cs" />
+    <Compile Include="Component\EquationTextBlock.xaml.cs">
+      <DependentUpon>EquationTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\LineGraphing.cs" />
+    <Compile Include="Functions\ParabolaGraphing.cs" />
+    <Compile Include="Model\MainModel.Options.cs" />
+    <Compile Include="Model\DataType\Curve.cs" />
+    <Compile Include="Kinect\KinectDevice.cs" />
+    <Compile Include="Kinect\CursorSupport\KinectCursorControl.cs" />
+    <Compile Include="Kinect\SkeletonSupport\SkeletonDisplay.cs" />
+    <Compile Include="Kinect\SkeletonSupport\SkeletonDisplayJoint.cs" />
+    <Compile Include="Model\DataType\LineCurve.cs" />
+    <Compile Include="Model\DataType\ParabolaCurve.cs" />
+    <Compile Include="Model\DataType\SineCurve.cs" />
+    <Compile Include="Model\DataType\TableItem.cs" />
+    <Compile Include="Model\MainModel.cs" />
+    <Compile Include="Model\GraphPlotModel.cs" />
+    <Compile Include="Component\Window_About_Credit.xaml.cs">
+      <DependentUpon>Window_About_Credit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MainModel.Speech.cs" />
+    <Compile Include="Model\Utility.cs" />
+    <Compile Include="Panels\ControlPanelContent.xaml.cs">
+      <DependentUpon>ControlPanelContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\ControlPane.xaml.cs">
+      <DependentUpon>ControlPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\ERROROptionPanelContent.xaml.cs">
+      <DependentUpon>ERROROptionPanelContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\MatchingOptionPanelContent.xaml.cs">
+      <DependentUpon>MatchingOptionPanelContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\IndicatorPane.xaml.cs">
+      <DependentUpon>IndicatorPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\OptionPane.xaml.cs">
+      <DependentUpon>OptionPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\OptionPanelContent.xaml.cs">
+      <DependentUpon>OptionPanelContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\GraphPlot.xaml.cs">
+      <DependentUpon>GraphPlot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Window_Ink.xaml.cs">
+      <DependentUpon>Window_Ink.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window_About.xaml.cs">
+      <DependentUpon>Window_About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window_Option.xaml.cs">
+      <DependentUpon>Window_Option.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Component\EquationTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\Window_About_Credit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\Window_Option_Content.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window_Splash.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Panels\ControlPanelContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Panels\ControlPane.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Panels\ERROROptionPanelContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Panels\MatchingOptionPanelContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Panels\IndicatorPane.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Panels\OptionPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Panels\OptionPanelContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Panels\GraphPlot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Panels\IndicatorPanelContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Panels\KinectCameraPanelContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Panels\FunctionTablePane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Window_Ink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window_About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window_Option.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Panels\IndicatorPanelContent.xaml.cs">
+      <DependentUpon>IndicatorPanelContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\KinectCameraPanelContent.xaml.cs">
+      <DependentUpon>KinectCameraPanelContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\FunctionTablePane.xaml.cs">
+      <DependentUpon>FunctionTablePane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\UW-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UW-logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\UW-logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

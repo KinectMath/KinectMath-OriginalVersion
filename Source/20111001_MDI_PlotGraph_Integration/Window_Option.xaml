@@ -1,0 +1,10 @@
+﻿<Window x:Class="MDI_PlotGraph_Integration.Window_Option"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:MDI_PlotGraph_Integration.Component"
+        Title="Option Window" Height="480" Width="600"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <my:Window_Option_Content x:Name ="Win_Option_Content" />
+    </Grid>
+</Window>
